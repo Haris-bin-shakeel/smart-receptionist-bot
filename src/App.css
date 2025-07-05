@@ -1,38 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --color-indigo: #6366f1;
+  --color-sky: #0ea5e9;
+  --color-green: #22c55e;
+  --color-bg: #f9fafb;
+  --color-text: #1e293b;
+  --color-accent: #f1f5f9;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  padding: 2rem 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+  flex: 1;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+footer {
+  background: var(--color-accent);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.95rem;
+  color: #64748b;
+  border-top: 1px solid #e5e7eb;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* === Pricing === */
+.pricing-section {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.pricing-title {
+  color: var(--color-indigo);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.pricing-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.pricing-card {
+  flex: 1;
+  max-width: 320px;
+  min-width: 280px;
+  padding: 2rem 1.5rem;
+  background: var(--color-accent);
+  border-radius: 20px;
+  border: 1.5px solid #e5e7eb;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.pricing-card.highlight {
+  background: #e0e7ff;
+  border: none;
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+}
+
+.pricing-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-card .price {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.pricing-card li {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.pricing-card li span {
+  color: var(--color-indigo);
+  margin-right: 0.5rem;
+}
+
+.pricing-card a {
+  background: var(--color-green);
   color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.pricing-card .badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--color-green);
+  color: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* === Responsive === */
+@media (max-width: 768px) {
+  .pricing-grid {
+    flex-direction: column;
+    gap: 1.5rem;
   }
 }
