@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# 🤖 AI Receptionist Bot
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Your **24/7 Smart Virtual Assistant** for modern businesses — built on Telegram, powered by AI.
 
-## Available Scripts
+[🔗 Try the Demo](https://t.me/ourreceptionistbot)  
+[🌐 Visit Live Website](https://smart-receptionist.netlify.app)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The AI Receptionist is a cloud-deployed smart Telegram bot that automates receptionist tasks such as:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Answering customer FAQs using fuzzy matching
+- Booking appointments via Google Calendar
+- Detecting emotion/sentiment
+- Handling voice messages
+- Smart fallback replies via OpenAI (GPT)
+- Offering Pro & Business upgrade plans
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ✨ Features
 
-### `npm run build`
+- ✅ FAQ Matching using Fuzzy Search
+- ✅ Voice & Text Support (via SpeechRecognition & ffmpeg)
+- ✅ Sentiment Detection using TextBlob
+- ✅ Google Calendar Booking & Event View
+- ✅ AI Fallback (OpenAI 3.5 Turbo)
+- ✅ Admin Dashboard-Ready Logging
+- ✅ Modular Codebase with Unit Tests
+- ✅ Beautiful React-based Landing Page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 💰 Plans & Pricing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Plan       | Price         | Features Included |
+|------------|---------------|-------------------|
+| Free       | $0 / month    | Demo access, limited voice/FAQ, no AI |
+| Pro        | $9–10 / month | AI replies, sentiment, full voice, booking |
+| Business   | Custom Quote  | Branding, multi-agent, admin panel, analytics |
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Frontend**: React, Tailwind CSS, Netlify
+- **Backend**: Python, `python-telegram-bot`, Flask
+- **APIs**: OpenAI API, Google Calendar API
+- **Voice**: `pydub`, `SpeechRecognition`, `ffmpeg`
+- **Deployment**: Heroku (bot), Netlify (website)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📂 Project Structure
 
-## Learn More
+ai-receptionist-website/
+│
+├── public/ # Assets
+│ ├── qr-telegram.png
+│ └── demo.gif
+│
+├── src/
+│ ├── components/ # All modular UI components
+│ ├── App.jsx
+│ └── App.css
+│
+├── bot/ # Python bot logic (separate repo)
+├── .env # API keys
+├── README.md
+└── package.json
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+yaml
+Copy code
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 📦 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- 🔧 Website hosted on: [Netlify](https://smart-receptionist.netlify.app)
+- 🤖 Telegram Bot: [@ourreceptionistbot](https://t.me/ourreceptionistbot)
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📬 Contact
 
-### Making a Progressive Web App
+- 📧 Email: [harisshakeel0981@gmail.com](mailto:harisshakeel0981@gmail.com)
+- 🌐 LinkedIn: [haris-shakeel-aa1186330](https://www.linkedin.com/in/haris-shakeel-aa1186330)
+- 📱 WhatsApp: [+92-344-8375098](https://wa.me/923448375098)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🏁 Status
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Live, working, and ready for client demos and integrations.**  
+Want to integrate this bot into your business? [Contact Me](mailto:harisshakeel0981@gmail.com)
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📈 Future Plans
 
-### `npm run build` fails to minify
+- 🔐 Admin Dashboard
+- 🔁 Multi-agent logic
+- 📊 Analytics and Usage reports
+- 🌐 Multilingual Support
+- 💬 WhatsApp & Web Chat integration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+> Made with ❤️ by Muhammad Haris  
+> Powered by OpenAI + Telegram API
+
