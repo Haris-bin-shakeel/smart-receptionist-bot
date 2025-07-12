@@ -56,31 +56,33 @@ The AI Receptionist is a cloud-deployed smart Telegram bot that automates recept
 
 ## 📂 Project Structure
 
+```
 ai-receptionist-website/
 │
-├── public/ # Assets
-│ ├── qr-telegram.png
-│ └── demo.gif
+├── public/                  # Static assets (images, favicon, etc.)
+│   ├── qr-telegram.png
+│   └── demo.gif
 │
-├── src/
-│ ├── components/ # All modular UI components
-│ │   ├── Hero.jsx
-│ │   ├── Features.jsx
-│ │   ├── Benefits.jsx
-│ │   ├── Pricing.jsx
-│ │   ├── Testimonials.jsx
-│ │   ├── FeedbackForm.jsx
-│ │   ├── Navbar.jsx
-│ │   ├── StickyCTA.jsx
-│ │   ├── Loader.jsx
-│ │   └── Footer.jsx
-│ ├── App.jsx
-│ └── App.css
+├── src/                     # React source code
+│   ├── components/          # All modular UI components
+│   │   ├── Hero.jsx         # Hero/landing section
+│   │   ├── Features.jsx     # Features section
+│   │   ├── Benefits.jsx     # Why Us/Benefits section
+│   │   ├── Pricing.jsx      # Pricing plans
+│   │   ├── Testimonials.jsx # Customer testimonials
+│   │   ├── FeedbackForm.jsx # Feedback/contact form
+│   │   ├── Navbar.jsx       # Sticky navigation bar
+│   │   ├── StickyCTA.jsx    # Sticky call-to-action button
+│   │   ├── Loader.jsx       # Loading spinner/animation
+│   │   └── Footer.jsx       # Footer section
+│   ├── App.jsx              # Main React app entry
+│   └── App.css              # Global styles/design system
 │
-├── bot/ # Python bot logic (separate repo)
-├── .env # API keys
-├── README.md
-└── package.json
+├── bot/                     # Python bot logic (separate repo)
+├── .env                     # API keys and environment variables
+├── README.md                # Project documentation
+└── package.json             # Project dependencies and scripts
+```
 
 ---
 
