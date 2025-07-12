@@ -3,49 +3,53 @@ import "../App.css";
 
 const plans = [
   {
-    name: "Free",
-    price: "₹0/mo",
-    features: ["Demo only", "No AI replies", "Basic FAQ"],
-    cta: "Try Demo",
+    name: "Free Trial",
+    price: "Free",
+    description: "Test the receptionist bot with limited features",
+    features: [
+      { text: "Basic chatbot access", icon: "fas fa-comments" },
+      { text: "No integration or calendar booking", icon: "fas fa-calendar-times" },
+      { text: "Limited AI responses", icon: "fas fa-robot" }
+    ],
+    cta: "Start Free Trial",
     highlight: false,
     link: "https://t.me/ourreceptionistbot"
   },
   {
-    name: "Pro",
-    price: "₹2,500/mo",
-    features: ["AI replies", "Booking & calendar sync", "All Free features"],
-    cta: "Start Pro",
+    name: "Business Integration",
+    price: "Custom Quote",
+    description: "Full receptionist automation for small businesses",
+    features: [
+      { text: "Google Calendar + Appointment Sync", icon: "fas fa-calendar-check" },
+      { text: "Voice Message Replies", icon: "fas fa-microphone" },
+      { text: "Smart FAQ Handling", icon: "fas fa-question-circle" },
+      { text: "Priority Support", icon: "fas fa-headset" },
+      { text: "Custom Integration Setup", icon: "fas fa-cogs" }
+    ],
+    cta: "Integrate Now",
     highlight: true,
-    link: "https://t.me/ourreceptionistbot"
-  },
-  {
-    name: "Business",
-    price: "Custom",
-    features: ["Full integration", "Custom workflows", "Priority support"],
-    cta: "Contact Us",
-    highlight: false,
     link: "mailto:harisshakeel0981@gmail.com"
   },
 ];
 
 const Pricing = () => (
   <section className="pricing-section">
-    <h2 className="pricing-title">Pricing</h2>
     <div className="pricing-grid">
       {plans.map((plan, i) => (
         <div key={i} className={`pricing-card${plan.highlight ? " highlight" : ""}`}>
-          {plan.highlight && <div className="pricing-popular">Most Popular</div>}
-          <div className="pricing-name">{plan.name}</div>
-          <div className="pricing-price">{plan.price}</div>
-          <ul className="pricing-features">
+          {plan.highlight && <div className="badge">Most Popular</div>}
+          <h3>{plan.name}</h3>
+          <div className="price">{plan.price}</div>
+          <p className="plan-description">{plan.description}</p>
+          <ul>
             {plan.features.map((f, j) => (
-              <li key={j} className="pricing-feature">
-                <span className="pricing-check">✔️</span>
-                <span>{f}</span>
+              <li key={j}>
+                <i className={f.icon}></i>
+                <span>{f.text}</span>
               </li>
             ))}
           </ul>
-          <a href={plan.link} target="_blank" rel="noopener noreferrer" className="pricing-btn">
+          <a href={plan.link} target="_blank" rel="noopener noreferrer">
             {plan.cta}
           </a>
         </div>

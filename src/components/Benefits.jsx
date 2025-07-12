@@ -1,22 +1,41 @@
 import React from "react";
 
 const benefits = [
-  { icon: "⏰", title: "24/7 Support", desc: "Never miss a customer—your bot works around the clock." },
-  { icon: "⚡", title: "Instant Replies", desc: "No waiting. Customers get answers in seconds." },
-  { icon: "🧠", title: "AI-Powered", desc: "Advanced AI understands and responds like a human." },
+  { 
+    icon: "fas fa-clock", 
+    title: "24/7 Support", 
+    desc: "Never miss a customer—your bot works around the clock.",
+    color: "#22c55e"
+  },
+  { 
+    icon: "fas fa-bolt", 
+    title: "Instant Replies", 
+    desc: "No waiting. Customers get answers in seconds.",
+    color: "#f59e0b"
+  },
+  { 
+    icon: "fas fa-brain", 
+    title: "AI-Powered", 
+    desc: "Advanced AI understands and responds like a human.",
+    color: "#6366f1"
+  },
 ];
 
 const Benefits = () => (
-  <section style={{ margin: '3rem 0', textAlign: 'center' }}>
-    <h2 style={{ color: 'var(--color-green)', fontWeight: 600, fontSize: '2rem', marginBottom: '2rem' }}>Why Choose Us?</h2>
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', justifyContent: 'center', maxWidth: 900, margin: '0 auto' }}>
-      {benefits.map((b, i) => (
-        <div key={i} style={{ background: 'var(--color-bg)', border: '2px solid var(--color-green)', borderRadius: 16, padding: '2rem 1.2rem', minWidth: 220, boxShadow: '0 2px 8px rgba(34,197,94,0.06)' }}>
-          <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{b.icon}</div>
-          <div style={{ fontWeight: 600, fontSize: '1.15rem', color: 'var(--color-green)', marginBottom: '0.5rem' }}>{b.title}</div>
-          <div style={{ color: 'var(--color-slate)', fontSize: '1rem' }}>{b.desc}</div>
-        </div>
-      ))}
+  <section className="benefits-section">
+    <div className="benefits-container">
+      <h2 className="benefits-title">Why Choose Us?</h2>
+      <div className="benefits-grid">
+        {benefits.map((b, i) => (
+          <div key={i} className="benefit-card">
+            <div className="benefit-icon" style={{ background: `linear-gradient(135deg, ${b.color} 0%, ${b.color}80 100%)` }}>
+              <i className={b.icon}></i>
+            </div>
+            <h3 className="benefit-title">{b.title}</h3>
+            <p className="benefit-description">{b.desc}</p>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 );

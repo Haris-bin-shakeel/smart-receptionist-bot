@@ -19,15 +19,28 @@ const testimonials = [
 ];
 
 const Testimonials = () => (
-  <section style={{ margin: '3rem 0', textAlign: 'center' }}>
-    <h2 style={{ color: 'var(--color-sky)', fontWeight: 600, fontSize: '2rem', marginBottom: '2rem' }}>What Our Users Say</h2>
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', justifyContent: 'center', maxWidth: 900, margin: '0 auto' }}>
-      {testimonials.map((t, i) => (
-        <div key={i} style={{ background: 'var(--color-accent)', borderRadius: 16, padding: '2rem 1.2rem', minWidth: 220, boxShadow: '0 2px 8px rgba(14,165,233,0.08)' }}>
-          <div style={{ fontWeight: 600, fontSize: '1.1rem', color: 'var(--color-sky)', marginBottom: '0.5rem' }}>{t.name} <span style={{ color: 'var(--color-slate)', fontWeight: 400 }}>({t.country})</span></div>
-          <div style={{ color: 'var(--color-slate)', fontSize: '1rem', fontStyle: 'italic' }}>&ldquo;{t.feedback}&rdquo;</div>
-        </div>
-      ))}
+  <section className="testimonials-section">
+    <div className="testimonials-container">
+      <h2 className="testimonials-title">What Our Users Say</h2>
+      <div className="testimonials-grid">
+        {testimonials.map((t, i) => (
+          <div key={i} className="testimonial-card">
+            <div className="testimonial-header">
+              <div className="testimonial-avatar">
+                <i className="fas fa-user"></i>
+              </div>
+              <div className="testimonial-info">
+                <div className="testimonial-name">{t.name}</div>
+                <div className="testimonial-country">({t.country})</div>
+              </div>
+            </div>
+            <div className="testimonial-quote">
+              <i className="fas fa-quote-left"></i>
+              <p>{t.feedback}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 );
