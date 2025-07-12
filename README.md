@@ -16,7 +16,6 @@ The AI Receptionist is a cloud-deployed smart Telegram bot that automates recept
 - Detecting emotion/sentiment
 - Handling voice messages
 - Smart fallback replies via OpenAI (GPT)
-- Offering Pro & Business upgrade plans
 
 ---
 
@@ -29,7 +28,10 @@ The AI Receptionist is a cloud-deployed smart Telegram bot that automates recept
 - ✅ AI Fallback (OpenAI 3.5 Turbo)
 - ✅ Admin Dashboard-Ready Logging
 - ✅ Modular Codebase with Unit Tests
-- ✅ Beautiful React-based Landing Page
+- ✅ Modern, responsive React-based Landing Page
+- ✅ Sticky Navbar with smooth scroll navigation
+- ✅ Real Feedback form (email-based)
+- ✅ Mobile-first, dark/gradient theme
 
 ---
 
@@ -38,14 +40,13 @@ The AI Receptionist is a cloud-deployed smart Telegram bot that automates recept
 | Plan       | Price         | Features Included |
 |------------|---------------|-------------------|
 | Free       | $0 / month    | Demo access, limited voice/FAQ, no AI |
-| Pro        | $9–10 / month | AI replies, sentiment, full voice, booking |
 | Business   | Custom Quote  | Branding, multi-agent, admin panel, analytics |
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React, Tailwind CSS, Netlify
+- **Frontend**: React, CSS (custom design system), Font Awesome, Pacifico font, Netlify
 - **Backend**: Python, `python-telegram-bot`, Flask
 - **APIs**: OpenAI API, Google Calendar API
 - **Voice**: `pydub`, `SpeechRecognition`, `ffmpeg`
@@ -63,6 +64,16 @@ ai-receptionist-website/
 │
 ├── src/
 │ ├── components/ # All modular UI components
+│ │   ├── Hero.jsx
+│ │   ├── Features.jsx
+│ │   ├── Benefits.jsx
+│ │   ├── Pricing.jsx
+│ │   ├── Testimonials.jsx
+│ │   ├── FeedbackForm.jsx
+│ │   ├── Navbar.jsx
+│ │   ├── StickyCTA.jsx
+│ │   ├── Loader.jsx
+│ │   └── Footer.jsx
 │ ├── App.jsx
 │ └── App.css
 │
@@ -71,15 +82,22 @@ ai-receptionist-website/
 ├── README.md
 └── package.json
 
-yaml
-Copy code
-
 ---
 
 ## 📦 Deployment
 
 - 🔧 Website hosted on: [Netlify](https://smart-receptionist.netlify.app)
 - 🤖 Telegram Bot: [@ourreceptionistbot](https://t.me/ourreceptionistbot)
+
+### Deploying Updates
+
+1. **Push your code to GitHub** (main branch).
+2. **Netlify auto-builds and deploys** your site on every push.
+3. **Build command:** `npm run build`  
+   **Publish directory:** `build`
+4. **Build image:** Ubuntu Focal 20.04 (set in Netlify site settings)
+
+*Do NOT upload the build folder manually. Use GitHub → Netlify integration for CI/CD.*
 
 ---
 
