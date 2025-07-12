@@ -99,7 +99,7 @@ ai-receptionist-website/
    **Publish directory:** `build`
 4. **Build image:** Ubuntu Focal 20.04 (set in Netlify site settings)
 
-*Do NOT upload the build folder manually. Use GitHub → Netlify integration for CI/CD.*
+
 
 ---
 
