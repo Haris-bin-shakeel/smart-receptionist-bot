@@ -1,45 +1,14 @@
 import React from "react";
 
-const testimonials = [
-  {
-    name: "Sarah M.",
-    country: "USA",
-    feedback: "The AI Receptionist Bot has transformed our customer support. Instant replies and 24/7 availability—amazing!"
-  },
-  {
-    name: "Jonas F.",
-    country: "Germany",
-    feedback: "Setup was easy and our clients love the voice input. Highly recommended for any business!"
-  },
-  {
-    name: "Priya S.",
-    country: "India",
-    feedback: "We never miss a booking now. The calendar sync and AI answers are a game changer."
-  }
-];
-
 const Testimonials = () => (
-  <section className="testimonials-section">
+  <section className="testimonials-section" style={{ margin: '3rem 0', textAlign: 'center' }}>
     <div className="testimonials-container">
-      <h2 className="testimonials-title">What Our Users Say</h2>
-      <div className="testimonials-grid">
-        {testimonials.map((t, i) => (
-          <div key={i} className="testimonial-card">
-            <div className="testimonial-header">
-              <div className="testimonial-avatar">
-                <i className="fas fa-user"></i>
-              </div>
-              <div className="testimonial-info">
-                <div className="testimonial-name">{t.name}</div>
-                <div className="testimonial-country">({t.country})</div>
-              </div>
-            </div>
-            <div className="testimonial-quote">
-              <i className="fas fa-quote-left"></i>
-              <p>{t.feedback}</p>
-            </div>
-          </div>
-        ))}
+      <h2 className="testimonials-title" style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '1.5rem' }}>What Our Users Say</h2>
+      <div className="testimonials-grid" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 120 }}>
+        <div className="testimonial-card" style={{ background: 'var(--bg-card, #181f2a)', borderRadius: 16, padding: '2rem', boxShadow: '0 2px 8px rgba(34,197,94,0.06)', color: '#bfc9e0', fontSize: '1.15rem' }}>
+          <i className="fas fa-quote-left" style={{ fontSize: '1.5rem', color: '#36c6f0', marginBottom: 8 }}></i>
+          <p><strong>Coming soon:</strong> See what real businesses say about Smart Receptionist. Want to be featured? <a href="mailto:harisshakeel0981@gmail.com" style={{ color: '#3182ce', textDecoration: 'underline' }}>Contact us</a> to share your story!</p>
+        </div>
       </div>
     </div>
   </section>

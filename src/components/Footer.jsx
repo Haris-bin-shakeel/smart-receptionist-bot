@@ -55,7 +55,14 @@ const Footer = () => (
 
       <div className="footer-powered">
         <i className="fas fa-robot"></i>
-        Powered by OpenAI + Telegram Bot
+        Powered by
+        <span style={{ margin: '0 4px' }}>
+          <i className="fab fa-telegram-plane" title="Telegram" style={{ color: '#36c6f0', fontSize: '1.15em', verticalAlign: 'middle' }}></i>
+        </span>
+        <span style={{ margin: '0 4px' }}>
+          <i className="fas fa-brain" title="OpenAI" style={{ color: '#22c55e', fontSize: '1.15em', verticalAlign: 'middle' }}></i>
+        </span>
+        OpenAI + Telegram Bot
       </div>
     </div>
   </footer>

@@ -1,86 +1,34 @@
 import React from "react";
 
-const features = [
-  { 
-    icon: "fas fa-microphone", 
-    title: "Voice Input", 
-    desc: "Let customers speak their queries—no typing needed.",
-    color: "#22c55e"
-  },
-  { 
-    icon: "fas fa-robot", 
-    title: "AI Replies", 
-    desc: "Smart, instant answers to customer questions.",
-    color: "#6366f1"
-  },
-  { 
-    icon: "fas fa-calendar-alt", 
-    title: "Calendar Sync", 
-    desc: "Seamless appointment booking and reminders.",
-    color: "#0ea5e9"
-  },
-  { 
-    icon: "fas fa-question-circle", 
-    title: "FAQ Auto-Reply", 
-    desc: "Answers common questions automatically, 24/7.",
-    color: "#f59e0b"
-  },
-];
-
-const cardStyle = {
-  background: "var(--bg-card)",
-  borderRadius: "var(--radius-2xl)",
-  padding: "var(--spacing-2xl) var(--spacing-lg)",
-  boxShadow: "var(--shadow-md)",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  transition: "all var(--transition-normal)",
-  border: "2px solid var(--border-light)",
-  cursor: "pointer",
-  position: "relative",
-  overflow: "hidden",
-};
-
-const cardHover = {
-  transform: "translateY(-8px) scale(1.02)",
-  boxShadow: "var(--shadow-xl)",
-  borderColor: "var(--primary-purple)",
-};
-
-const Features = () => {
-  const [hovered, setHovered] = React.useState(-1);
-  return (
-    <section className="features-section">
-      <div className="features-container">
-        <h2 className="features-title">Features</h2>
-        <div className="features-grid">
-          {features.map((f, i) => (
-            <div
-              key={i}
-              className={`feature-card ${hovered === i ? 'hovered' : ''}`}
-              style={{
-                ...cardStyle,
-                ...(hovered === i ? cardHover : {}),
-              }}
-              tabIndex={0}
-              aria-label={f.title + ': ' + f.desc}
-              onMouseEnter={() => setHovered(i)}
-              onMouseLeave={() => setHovered(-1)}
-              onFocus={() => setHovered(i)}
-              onBlur={() => setHovered(-1)}
-            >
-              <div className="feature-icon-wrapper" style={{ background: `linear-gradient(135deg, ${f.color} 0%, ${f.color}80 100%)` }}>
-                <i className={f.icon} style={{ color: "#fff", fontSize: "1.5rem" }}></i>
-              </div>
-              <h3 className="feature-title">{f.title}</h3>
-              <p className="feature-description">{f.desc}</p>
-            </div>
-          ))}
-        </div>
+const Features = () => (
+  <section className="features-section" id="features">
+    <h2 className="features-title">Features</h2>
+    <div className="features-grid">
+      {/* Free Plan Features */}
+      <div className="feature-card">
+        <h3>Free Plan</h3>
+        <ul>
+          <li><i className="fas fa-comments"></i> Predefined FAQ Answers</li>
+          <li><i className="fas fa-microphone"></i> Basic Voice Message Support</li>
+          <li><i className="fas fa-calendar-check"></i> Basic Appointment Booking</li>
+          <li><i className="fas fa-robot"></i> AI-Powered Chat (limited)</li>
+        </ul>
+        <p className="feature-note">Great for testing and small teams. No credit card required.</p>
       </div>
-    </section>
-  );
-};
+      {/* Business Integration Features */}
+      <div className="feature-card highlight">
+        <h3>Business Integration</h3>
+        <ul>
+          <li><i className="fas fa-calendar-alt"></i> Full Calendar Integration</li>
+          <li><i className="fas fa-microphone"></i> Advanced Voice Features</li>
+          <li><i className="fas fa-cogs"></i> Custom Business Workflows</li>
+          <li><i className="fas fa-headset"></i> Priority Support</li>
+          <li><i className="fas fa-infinity"></i> Unlimited AI Responses</li>
+        </ul>
+        <p className="feature-note">Unlock after upgrade. Perfect for growing businesses—activate full receptionist power after purchase!</p>
+      </div>
+    </div>
+  </section>
+);
 
 export default Features; 
