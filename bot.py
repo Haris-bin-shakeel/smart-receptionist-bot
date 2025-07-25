@@ -13,7 +13,7 @@ import speech_recognition as sr
 from gtts import gTTS
 import openai
 from config import TELEGRAM_TOKEN, OPENAI_API_KEY
-from calendar_helper import get_calendar_service
+from calendar_helper import get_calendar_service_or_mock as get_calendar_service
 import datetime
 import pytz
 from datetime import timedelta
