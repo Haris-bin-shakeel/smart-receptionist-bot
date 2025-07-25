@@ -1,0 +1,24 @@
+{
+  "business_name": "AI Receptionist Demo",
+  "business_type": "Demo Business",
+  "greeting": "Hello! 🤖 Welcome to our AI Receptionist Demo! I can help you with appointments, answer questions, and show you how this system works for any business. Try asking me about services, booking, or anything else!",
+  "business_hours": {
+    "start": "09:00",
+    "end": "18:00"
+  },
+  "timezone": "Asia/Karachi",
+  "appointment_duration": 60,
+  "services": [
+    "General Consultation",
+    "Demo Meeting",
+    "Business Integration"
+  ],
+  "address": "Virtual Office",
+  "phone": "+92-XXX-XXXXXXX",
+  "email": "demo@aireceptionist.com",
+  "social_media": {
+    "website": "https://smart-receptionist.netlify.app"
+  },
+  "payment_methods": ["Card", "Bank Transfer"],
+  "special_notes": "This is a demonstration of our AI receptionist capabilities. Contact us to set up your business!"
+}

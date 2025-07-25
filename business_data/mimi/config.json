@@ -1,0 +1,31 @@
+{
+  "business_name": "Mimi's Beauty Studio",
+  "business_type": "Beauty Salon",
+  "greeting": "Hi there! \ud83d\udc84 Welcome to Mimi's Beauty Studio! I'm here to help you with appointments, services, and answer any questions about our beauty treatments.",
+  "business_hours": {
+    "start": "10:00",
+    "end": "19:00"
+  },
+  "timezone": "Asia/Karachi",
+  "appointment_duration": 90,
+  "services": [
+    "Hair Styling & Cut",
+    "Facial Treatment",
+    "Manicure & Pedicure",
+    "Bridal Makeup",
+    "Hair Coloring"
+  ],
+  "address": "Beauty Plaza, Main Market Street",
+  "phone": "+92-XXX-XXXXXXX",
+  "email": "appointments@mimisbeauty.com",
+  "social_media": {
+    "instagram": "@mimisbeautystudio",
+    "facebook": "Mimi's Beauty Studio"
+  },
+  "payment_methods": [
+    "Cash",
+    "Card",
+    "Bank Transfer"
+  ],
+  "special_notes": "Please arrive 10 minutes early. Complimentary refreshments provided."
+}
