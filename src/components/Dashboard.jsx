@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import { getTrialDaysRemaining, hasFeatureAccess } from "../utils/userPlan";
+import BusinessSetup from "./BusinessSetup";
 import "../App.css";
 
 const Dashboard = () => {
@@ -101,6 +102,13 @@ const Dashboard = () => {
             >
               <i className="fas fa-credit-card"></i>
               Subscription
+            </button>
+            <button 
+              className={`nav-item ${activeTab === 'bot-setup' ? 'active' : ''}`}
+              onClick={() => setActiveTab('bot-setup')}
+            >
+              <i className="fas fa-robot"></i>
+              Bot Setup
             </button>
             <button 
               className={`nav-item ${activeTab === 'settings' ? 'active' : ''}`}
@@ -298,6 +306,10 @@ const Dashboard = () => {
                 </div>
               )}
             </div>
+          )}
+
+          {activeTab === 'bot-setup' && (
+            <BusinessSetup />
           )}
 
           {activeTab === 'settings' && (

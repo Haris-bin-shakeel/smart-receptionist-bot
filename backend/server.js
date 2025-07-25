@@ -16,6 +16,7 @@ const paymentRoutes = require('./routes/payments');
 const analyticsRoutes = require('./routes/analytics');
 const webhookRoutes = require('./routes/webhooks');
 const leadRoute = require('./routes/lead');
+const botRoutes = require('./routes/bot');
 
 // Load environment variables
 
@@ -58,6 +59,7 @@ app.use('/api/payments', paymentRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/webhooks', webhookRoutes);
 app.use('/api/lead', leadRoute);
+app.use('/api/bot', botRoutes);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
